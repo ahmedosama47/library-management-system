@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# library-management-system
+Library Management System with React frontend and Node.js backend
+
+Library management system with 3 availabe tabs through navbar . About us , Our Books , Borrow a book
+
+Our Books shows up with cool UI/UX as well as Login
+
+Borrow wouldn't show up if you aren't signed in
+>>>>>>> 5e59f1c834bd5e0a707868c2a15ce8767de7f17a
