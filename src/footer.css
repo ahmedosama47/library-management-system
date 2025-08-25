@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+    font-family: poppins;
+    margin: 0;
+    display: grid;
+    font-size: 14px;
+    overflow-x : hidden
+}
+main {
+    display :-webkit-flex;
+    display :-moz-flex;
+    display :-ms-flex;
+    display :-o-flex;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    color :#9b9b9b;
+    line-height: 3.8;
+    font-size : 80px; 
+}
+
+footer{
+    display : -webkit-flex;
+    display : -moz-flex;
+    display : -ms-flex;
+    display : -o-flex;
+    display : flex;
+    flex-flow : row wrap;
+    padding : 50px;
+    color : #fff;
+    background-color : #011c39;
+}
+
+.footer > * {
+    flex : 1 100%;
+
+}
+.footer-left{
+    margin-right :1.25em;
+    margin-bottom: 2em;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+
+}
+
+.socials a{
+    background: #364a62;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    margin-right: 10px;
+    border-radius: 4px;       
+    text-decoration: none;    
+}
+.social a i{
+    color: #e7f2f4;
+    font-size: 20px;
+    padding: 0;
+    line-height: 1;
+
+}
+.footer-left p{
+    padding-right: 20%;
+    color : #999;
+}

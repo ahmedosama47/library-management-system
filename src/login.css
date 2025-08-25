@@ -1,0 +1,180 @@
+.Login {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;   
+    z-index: 0;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+
+        #login-form , #register-form {   
+            background-color: white;
+            position: relative;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow:
+                0 10px 20px rgba(0, 0, 0, 0.2),
+                0 20px 40px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+            font-family: Arial, sans-serif;
+            transition: transform 0.3s ease;
+        }
+.form-border {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    border-radius: 16px;
+    z-index: 0;
+}
+.form-border::before,
+.form-border::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 3px);   
+    height: calc(100% + 3px);
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.form-border::after {
+    background-image: conic-gradient(from var(--angle), transparent 0%, rgb(0, 40, 83), rgb(38, 10, 195),#0810ed,#0602f8,rgb(0, 40, 83) );
+    animation: spin 3s linear infinite;
+}
+
+.form-border::before {
+    background-image: conic-gradient(from var(--angle), transparent 0%,rgb(0, 40, 83), rgb(38, 10, 195),#0810ed,#0602f8,rgb(0, 40, 83) );
+    filter: blur(1.5rem);
+    opacity: 0.5;
+    animation: spin 3s linear infinite;
+}
+.form-border:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.25),
+        0 24px 48px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+        #login-form:hover , #register-form:hover{
+                box-shadow:
+                0 14px 28px rgba(0, 0, 0, 0.25),
+                0 24px 48px rgba(0, 0, 0, 0.2);
+            
+        }
+ 
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-floating label {
+            padding-left: 12px;
+        }
+
+        .ripple-button {
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+            .sign-in {
+            
+            position: absolute;
+            overflow: hidden;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+            
+            top: 10px;
+            right: 10px;
+            z-index : 10;
+            
+        }
+
+        .ripple-button:hover , .sign-in:hover{
+            background-color: green;
+        }
+
+        .ripple-button::after {
+            content: "";
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+                .sign-in::after {
+            content: "";
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            width: 100%;
+            height:100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .ripple-button:hover::after  , .sign-in:hover::after {
+            transform: translate(-50%, -50%) scale(2.5);
+            opacity: 1;
+        }
+
+
+        .floating-form>label {
+            font-weight: 400;
+            color: #6c757d;
+        }
+
+.form-control.is-valid,
+.form-control:valid {
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
